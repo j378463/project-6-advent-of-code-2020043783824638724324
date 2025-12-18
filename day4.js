@@ -6,7 +6,7 @@
 // Part 2: Also validate field values with strict rules
 //
 // Implementation:
-// - Split input by double newlines → passport blocks
+// - Split input by double newlines > passport blocks
 // - Parse each block into object using reduce
 // - Validate presence and values
 //
@@ -88,3 +88,4 @@ function isValidFieldData(passport) {
 console.log('Part 1:', passports.filter(hasRequiredFields).length);
 
 console.log('Part 2:', passports.filter(isValidFieldData).length);
+
