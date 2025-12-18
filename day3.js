@@ -1,6 +1,6 @@
 // day3.js
 // Advent of Code 2020 - Day 3: Toboggan Trajectory
-// Problem Understanding:
+// Problem:
 // Grid of trees (#) and open (.) that repeats horizontally.
 // Start at (0,0), move right 3, down 1 each step.
 // Part 1: Count trees hit on slope (3 right, 1 down)
@@ -50,4 +50,5 @@ function part2() {
 }
 
 console.log('Part 1:', part1());
+
 console.log('Part 2:', part2());
