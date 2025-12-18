@@ -36,7 +36,7 @@ const entries = input.map(line => {
 function part1() {
     return entries.reduce((validCount, entry) => {
         // Count occurrences of letter in password
-        // match returns array of matches or null → use || [] to default to empty
+        // match returns array of matches or null > use || [] to default to empty
         const occurrences = (entry.password.match(new RegExp(entry.letter, 'g')) || []).length;
         // Check if count is within range
         return validCount + (occurrences >= entry.min && occurrences <= entry.max ? 1 : 0);
@@ -56,3 +56,4 @@ function part2() {
 console.log('Part 1:', part1());
 
 console.log('Part 2:', part2());
+
