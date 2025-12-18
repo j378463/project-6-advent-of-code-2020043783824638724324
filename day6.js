@@ -1,6 +1,6 @@
 // day6.js
 // Advent of Code 2020 - Day 6: Custom Customs
-// Problem Understanding:
+// Problem:
 // Groups separated by blank lines, each person answers yes to questions (a-z)
 // Part 1: Count unique questions anyone in group answered yes
 // Part 2: Count questions everyone in group answered yes
@@ -46,4 +46,5 @@ function part2() {
 }
 
 console.log('Part 1:', part1());
+
 console.log('Part 2:', part2());
