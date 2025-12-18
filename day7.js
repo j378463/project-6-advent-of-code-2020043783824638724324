@@ -1,12 +1,12 @@
 // day7.js
 // Advent of Code 2020 - Day 7: Handy Haversacks
-// Problem Understanding:
+// Problem:
 // Bag containment rules: "outer bags contain X inner bags"
 // Part 1: How many bag colors can eventually contain a shiny gold bag?
 // Part 2: How many individual bags are required inside one shiny gold bag?
 //
 // Implementation:
-// - Parse rules into Map: outer → Map(inner → count)
+// - Parse rules into Map: outer → Map(inner > count)
 // - Part 1: Build reverse graph and BFS from "shiny gold"
 // - Part 2: Recursive count with memoization
 //
@@ -20,7 +20,7 @@ const fs = require('fs');
 
 const lines = fs.readFileSync('input/day7.txt', 'utf8').trim().split('\n');
 
-// contains: outer bag → Map of (inner bag → count)
+// contains: outer bag > Map of (inner bag → count)
 const contains = new Map();
 
 for (const line of lines) {
@@ -70,7 +70,7 @@ function part1() {
 }
 
 // Part 2: Count total bags inside one shiny gold bag
-const memo = new Map(); // Memoization cache: bag → total inner bags
+const memo = new Map(); // bag > total inner bags
 
 function countBagsInside(bagColor) {
     if (memo.has(bagColor)) return memo.get(bagColor);
@@ -92,4 +92,5 @@ function part2() {
 }
 
 console.log('Part 1:', part1());
+
 console.log('Part 2:', part2());
