@@ -1,6 +1,6 @@
 // day4.js
 // Advent of Code 2020 - Day 4: Passport Processing
-// Problem Understanding:
+// Problem:
 // Passports separated by blank lines, fields as "key:value"
 // Part 1: Valid if all required fields present (cid optional)
 // Part 2: Also validate field values with strict rules
@@ -86,4 +86,5 @@ function isValidFieldData(passport) {
 }
 
 console.log('Part 1:', passports.filter(hasRequiredFields).length);
+
 console.log('Part 2:', passports.filter(isValidFieldData).length);
