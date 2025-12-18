@@ -1,6 +1,6 @@
 // day5.js
 // Advent of Code 2020 - Day 5: Binary Boarding
-// Problem Understanding:
+// Problem:
 // Seat codes use binary space partitioning:
 // F/L = lower half (0), B/R = upper half (1)
 // First 7 chars = row (0-127), last 3 = column (0-7)
@@ -9,7 +9,7 @@
 // Part 2: Find missing seat ID (your seat) in nearly full plane
 //
 // Implementation:
-// Replace F/B and L/R with 0/1 → parse as binary
+// Replace F/B and L/R with 0/1 > parse as binary
 // Sort IDs and find gap of 2
 //
 // Key Methods & Documentation:
@@ -49,7 +49,7 @@ function part1() {
 }
 
 function part2() {
-    // Plane is almost full → only one missing seat → find gap of 2 between consecutive IDs
+    // Plane is almost full > only one missing seat > find gap of 2 between consecutive IDs
     for (let i = 1; i < seatIDs.length; i++) {
         if (seatIDs[i] - seatIDs[i - 1] === 2) {
             return seatIDs[i] - 1; // The missing one
@@ -59,4 +59,5 @@ function part2() {
 }
 
 console.log('Part 1:', part1());
+
 console.log('Part 2:', part2());
