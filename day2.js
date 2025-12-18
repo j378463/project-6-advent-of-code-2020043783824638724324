@@ -1,9 +1,9 @@
 // day2.js
 // Advent of Code 2020 - Day 2: Password Philosophy
-// Problem Understanding:
+// Problem:
 // Each line: "min-max letter: password"
 // Part 1: Password valid if letter appears between min and max times (inclusive)
-// Part 2: Toboggan policy - letter must appear at exactly ONE of position min or max (1-indexed)
+// Part 2: Toboggan policy: letter must appear at exactly ONE of position min or max (1-indexed)
 //
 // Implementation:
 // - Use regex to parse each line into structured object
@@ -45,7 +45,7 @@ function part1() {
 
 function part2() {
     return entries.reduce((validCount, entry) => {
-        // Positions are 1-indexed, so subtract 1 for 0-indexed string access
+        // Positions are 1-indexed, so we subtract 1 for 0-indexed string access
         const pos1 = entry.password[entry.min - 1] === entry.letter;
         const pos2 = entry.password[entry.max - 1] === entry.letter;
         // Valid if exactly one position has the letter (XOR)
@@ -54,4 +54,5 @@ function part2() {
 }
 
 console.log('Part 1:', part1());
+
 console.log('Part 2:', part2());
