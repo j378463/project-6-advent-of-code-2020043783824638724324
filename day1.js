@@ -1,11 +1,11 @@
 // day1.js
 // Advent of Code 2020 - Day 1: Report Repair
-// Problem Understanding:
+// Problem:
 // We are given a list of expense report numbers.
-// Part 1: Find TWO numbers that add up to 2020 and return their product.
-// Part 2: Find THREE numbers that add up to 2020 and return their product.
+// Part 1: Find 2 numbers that add up to 2020 and return their product.
+// Part 2: Find 3 numbers that add up to 2020 and return their product.
 //
-// Implementation Approach:
+// Implementation:
 // - Part 1: Use a Set for O(1) lookup. For each number, check if (2020 - num) exists.
 // - Part 2: For each pair, use a Set of remaining numbers to find the third complement.
 //
@@ -56,4 +56,5 @@ function part2(numbers) {
 }
 
 console.log('Part 1:', part1(input));
+
 console.log('Part 2:', part2(input));
